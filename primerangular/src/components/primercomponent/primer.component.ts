@@ -6,7 +6,8 @@ import {Component} from "@angular/core";
     selector: "primer-component",
     standalone:false,
     //por ahora no voy a tener html separado podremos incluirlo dentro del propio component
-    templateUrl: "./primer.component.html"
+    templateUrl: "./primer.component.html",
+    styleUrls: ["./primer.component.css"]
 })
     //cada component debe tener una clase asociada en su ts dicho nombre de clase si lleva mayusxulas 
     //y se declara dentro de app-module.ts
