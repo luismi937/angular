@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Tabla de multiplicar</h2>
+
+  <form (ngSubmit)="generarTabla()" class="formulario">
+    <label for="numero">Introduce un número:</label>
+    <input type="number" id="numero" [(ngModel)]="numero" name="numero">
+    <button type="submit">Generar</button>
+  </form>
+
+  <div class="tabla" *ngIf="resultados.length > 0">
+    <div *ngFor="let resultado of resultados; let i = index" class="fila">
+      <span>{{ numero }} x {{ i + 1 }} = {{ resultado }}</span>
+    </div>
+  </div>
+</div>

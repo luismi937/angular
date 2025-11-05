@@ -5,8 +5,13 @@ import { Component, OnInit, DoCheck } from "@angular/core";
     templateUrl: "./hooksangular.component.html"
 })
 export class hooksangular implements OnInit{
+    public mensaje: string;
     constructor(){
         console.log("Constructor: Primer metodo de inicio de Component")
+        this.mensaje = "Hoy es miercoles"
+    }
+    cambiarMensaje(){
+        this.mensaje = "y mañana juernes!!!"
     }
     ngOnInit(): void {
         console.log("Soy OnInit, despues de constructor")
