@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home.component/home.component';
 import { routing, appRoutingProvider } from './app.routing';
 import { MenuComponent } from './components/menu.component/menu.component';
 import { NotfoundComponent } from './components/notfound.component/notfound.component';
+import { NumerodobleComponent } from './components/numerodoble.component/numerodoble.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NotfoundComponent } from './components/notfound.component/notfound.comp
     MusicaComponent,
     HomeComponent,
     MenuComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    NumerodobleComponent
   ],
   imports: [
     BrowserModule, routing

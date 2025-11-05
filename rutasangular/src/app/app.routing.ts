@@ -5,13 +5,16 @@ import { MusicaComponent } from "./components/musica.component/musica.component"
 import{Routes, RouterModule} from "@angular/router"
 import { ModuleWithProviders } from "@angular/core";
 import { NotfoundComponent } from "./components/notfound.component/notfound.component";
+import { NumerodobleComponent } from "./components/numerodoble.component/numerodoble.component";
 
 //necesitamos un array con las rutas dicho array sera de tipo routes
 const appRoutes: Routes=[
     {path:"", component: HomeComponent},
     {path:"cine", component: CineComponent},
     {path: "musica", component:MusicaComponent},
-    {path:"**",component:NotfoundComponent}
+    {path: "numerodoble", component:NumerodobleComponent},
+    {path:"**",component:NotfoundComponent},
+
 ]
 //desde esta clase debemos exportar el array de routes xomo provider
 export const appRoutingProvider: any[] = []
