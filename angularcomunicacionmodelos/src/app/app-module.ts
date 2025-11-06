@@ -11,6 +11,7 @@ import { PadredeportesComponent } from './components/padredeportes.component/pad
 import { HijodeporteComponent } from './components/hijodeporte.component/hijodeporte.component';
 import { ComicsComponent } from './components/comics.component/comics.component';
 import { ComicComponent } from './components/comic.component/comic.component';
+import { LibreriaComponent } from './components/libreria.component/libreria.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ComicComponent } from './components/comic.component/comic.component';
     PadredeportesComponent,
     HijodeporteComponent,
     ComicsComponent,
-    ComicComponent
+    ComicComponent,
+    LibreriaComponent
   ],
   imports: [
     BrowserModule, routing
