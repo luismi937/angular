@@ -1,31 +1,36 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; // ✅ necesario para *ngFor, *ngIf
+import { RouterModule } from '@angular/router'; // ✅ necesario para routerLink
 
 import { App } from './app';
-import { CineComponent } from './components/cine.component/cine.component';
-import { MusicaComponent } from './components/musica.component/musica.component';
-import { HomeComponent } from './components/home.component/home.component';
 import { routing, appRoutingProvider } from './app.routing';
-import { MenuComponent } from './components/menu.component/menu.component';
-import { NotfoundComponent } from './components/notfound.component/notfound.component';
-import { NumerodobleComponent } from './components/numerodoble.component/numerodoble.component';
 
+// 🔹 Componentes
+import { MenuComponent } from './components/menu.component/menu.component';
+
+// 🔹 Componentes standalone
+import { TablamultiplicarroutingComponent } from './components/tablamultiplicarrouting.component/tablamultiplicarrouting.component';
+import { MenutablamultiplicarComponent } from './components/menutablamultiplicar.component/menutablamultiplicar.component';
 
 @NgModule({
   declarations: [
     App,
-    CineComponent,
-    MusicaComponent,
-    HomeComponent,
-    MenuComponent,
-    NotfoundComponent,
-    NumerodobleComponent
+    // Los standalone NO van aquí
+    // Otros componentes antiguos si los necesitas
   ],
   imports: [
-    BrowserModule, routing
+    BrowserModule,
+    CommonModule, // ✅ para *ngFor, *ngIf
+    RouterModule, // ✅ para routerLink
+    routing,
+
+    // 🔹 Importar los componentes standalone
+    MenuComponent,
+    TablamultiplicarroutingComponent,
+    MenutablamultiplicarComponent
   ],
   providers: [
-    provideBrowserGlobalErrorListeners(),
     appRoutingProvider
   ],
   bootstrap: [App]

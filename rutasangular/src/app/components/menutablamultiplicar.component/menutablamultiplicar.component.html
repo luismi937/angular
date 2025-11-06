@@ -1,0 +1,6 @@
+<h2>Menú Tablas de Multiplicar</h2>
+<ul>
+  <li *ngFor="let numero of numeros">
+    <a [routerLink]="['/tabla', numero]">Tabla del {{ numero }}</a>
+  </li>
+</ul>

@@ -1,4 +1,23 @@
 <div>
 <h1>Numero Doble</h1>
+@if (numero){
+    <h2 style="color:blue">El doble del {{numero}} es {{doble}}</h2>
+}@else{
+    <h2 style="color:red">
+        No hemos recibido parametro
+    </h2>
+    <button (click)="goToHome()">
+        Volver a Home
+    </button>
+    <button (click)="redirect(44)">
+        redirect 44
+    </button>
+     <button (click)="redirect(55)">
+        redirect 55
+    </button>
+     <button (click)="redirect(6)">
+        redirect 6
+    </button>
+}
 
 </div>
