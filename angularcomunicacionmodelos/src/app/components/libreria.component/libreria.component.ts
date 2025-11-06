@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-libreria.component',
+  selector: 'app-libreria',
   standalone: false,
   templateUrl: './libreria.component.html',
   styleUrl: './libreria.component.css',
