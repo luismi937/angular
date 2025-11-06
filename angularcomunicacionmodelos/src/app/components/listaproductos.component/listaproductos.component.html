@@ -1,0 +1,11 @@
+<div>
+    <h1>Modelos Producto Angular</h1>
+    @for (prod of productos; track prod){
+        <div>
+            <h2 style="color:blue">
+                {{prod.nombre}}, {{prod.precio}}
+            </h2>
+            <img src={{prod.imagen}} style="width: 150px; height: 150px;"/>
+        </div>
+    }
+</div>
