@@ -1,3 +1,13 @@
 <div>
-    <h1>Personas standalone</h1>
+    <h1>Personas Api Standalone</h1>
+    @if (personas){
+     <ul class="list-group" *ngIf="personas.length > 0">
+    @for (person of personas; track person){
+        <li *ngFor="let person of personas" class="list-group-item">
+            {{person.Nombre}}, {{person.Email}}
+        </li>
+    }
+    </ul>
+    }
+    
 </div>
