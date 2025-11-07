@@ -1,9 +1,17 @@
 <div class="personas">
   <h1>Lista de Personas</h1>
+
+  <div class="buttons">
+    <button (click)="loadWithHttp()">Cargar con HttpClient</button>
+    <button (click)="loadWithAxios()">Cargar con Axios</button>
+    <button (click)="loadWithFetch()">Cargar con Fetch</button>
+  </div>
+
   <ul>
     <li *ngFor="let person of personas">
       <strong>{{ person.Nombre }}</strong> - {{ person.Email }}
     </li>
   </ul>
+
   <button (click)="goHome()">Volver a Home</button>
 </div>

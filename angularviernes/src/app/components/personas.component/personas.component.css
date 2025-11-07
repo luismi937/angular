@@ -148,3 +148,18 @@ h1::after {
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
+.buttons button {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}

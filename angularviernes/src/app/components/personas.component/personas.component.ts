@@ -20,13 +20,29 @@ export class PersonasComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.personasService.getPersonas().subscribe({
-      next: (data) => this.personas = data,
-      error: (err) => console.error('Error al cargar personas', err)
-    });
+    // Cargar por defecto con HttpClient
+    this.loadWithHttp();
   }
 
   goHome() {
     this.router.navigate(['/']);
+  }
+
+  // 1️⃣ HttpClient
+  loadWithHttp() {
+    this.personasService.getPersonasHttp().subscribe({
+      next: (data) => this.personas = data,
+      error: (err) => console.error('Error HttpClient:', err)
+    });
+  }
+
+  // 2️⃣ Axios
+  async loadWithAxios() {
+    this.personas = await this.personasService.getPersonasAxios();
+  }
+
+  // 3️⃣ Fetch API
+  async loadWithFetch() {
+    this.personas = await this.personasService.getPersonasFetch();
   }
 }
