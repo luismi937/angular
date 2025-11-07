@@ -1,0 +1,74 @@
+/* Estilos generales */
+div {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* Línea decorativa debajo del título */
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Lista */
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ítems de la lista */
+.list-group-item {
+  background: #f8f9fa;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  color: #333;
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+/* Efecto hover */
+.list-group-item:hover {
+  background: #eaf6ff;
+  transform: translateX(5px);
+  border-left: 5px solid #007bff;
+  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.15);
+}
+
+/* Animación suave al aparecer */
+.list-group-item {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Keyframes para la animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
