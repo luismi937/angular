@@ -1,5 +1,6 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Comic } from '../../models/producto/comics';
+import { ServiceComics } from '../../services/service.comics';
 
 
 @Component({
@@ -7,12 +8,13 @@ import { Comic } from '../../models/producto/comics';
   standalone: false,
   templateUrl: './libreria.component.html',
   styleUrl: './libreria.component.css',
+  //debemos declarar el servicio para poder recuperarlo dentro de un constructor
 })
-export class LibreriaComponent {
+export class LibreriaComponent implements OnInit{
 @ViewChild("cajanombre") cajaNombre !: ElementRef;
 @ViewChild("cajadescripcion") cajaDescripcion !: ElementRef;
 @ViewChild("cajaimagen") cajaimagen!: ElementRef;
-  public comics: Array<Comic>; 
+  public comics!: Array<Comic>; 
   public comicFavorito!: Comic;
 
   createComic(): void{
@@ -28,33 +30,11 @@ export class LibreriaComponent {
   deleteComic(index: number){
     this.comics.splice(index, 1)
   }
-  constructor(){
-    this.comics = [
-      new Comic(
-        "Spiderman",
-        "https://images-na.ssl-images-amazon.com/images/I/61AYfL5069L.jpg",
-        "Hombre araña"
-      ),
-      new Comic(
-        "Wolverine",
-        "https://i.etsystatic.com/9340224/r/il/42f0e1/1667448004/il_570xN.1667448004_sqy0.jpg",
-        "Lobezno"
-      ),
-      new Comic(
-        "Guardianes de la Galaxia",
-        "https://cdn.normacomics.com/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/g/u/guardianes_galaxia_guadianes_infinito.jpg",
-        "Yo soy Groot"
-      ),
-      new Comic(
-      "Avengers",
-      "https://d26lpennugtm8s.cloudfront.net/stores/057/977/products/ma_avengers_01_01-891178138c020318f315132687055371-640-0.jpg",
-      "Los Vengadores"
-      ),
-      new Comic(
-      "Spawn",
-      "https://i.pinimg.com/originals/e1/d8/ff/e1d8ff4aeab5e567798635008fe98ee1.png",
-      "Todd MacFarlane"
-      )
-    ]; 
+  constructor(private _service: ServiceComics){}
+
+    ngOnInit(): void{
+      this.comics = this._service.getComics();
+    }
+   
   }
-}
+

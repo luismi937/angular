@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { App } from './app';
 import { ListaproductosComponent } from './components/listaproductos.component/listaproductos.component';
-import { routing } from './app.routing';
+import { appRoutingProvider, routing } from './app.routing';
 import { MenuproductosComponent } from './components/menuproductos.component/menuproductos.component';
 import { HijococheComponent } from './components/hijocoche.component/hijocoche.component';
 import { PadrecochesComponent } from './components/padrecoches.component/padrecoches.component';
@@ -12,6 +12,8 @@ import { HijodeporteComponent } from './components/hijodeporte.component/hijodep
 import { ComicComponent } from './components/comic.component/comic.component';
 import { LibreriaComponent } from './components/libreria.component/libreria.component';
 import { FormsModule } from '@angular/forms';
+import { ServiceComics } from './services/service.comics';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule, routing, FormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideHttpClient()
+    ,provideBrowserGlobalErrorListeners(), appRoutingProvider, ServiceComics, 
   ],
   bootstrap: [App]
 })
