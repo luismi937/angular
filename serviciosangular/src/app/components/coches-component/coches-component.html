@@ -1,0 +1,12 @@
+<div>
+    <h1>Api Coches con fetch</h1>
+    @for (car of coches; track car){
+        <div>
+            <img src={{car.imagen}} >
+            <div>
+            <h5>{{car.marca}} {{car.modelo}}</h5>
+            <p>{{car.conductor}}</p>
+            </div>
+        </div>
+    }
+</div>
