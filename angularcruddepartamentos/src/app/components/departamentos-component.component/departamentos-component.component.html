@@ -1,0 +1,26 @@
+<div>
+    @if (departamentos.length > 0){
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+            </tr>
+
+            </thead>
+            <tr>
+                @for (dept of departamentos; track dept){
+                    <th>{{dept.id}}</th>
+                    <th>{{dept.nombre}}</th>
+                    <th>{{dept.localidad}}</th>
+                    <td>
+                      <a [routerLink]="['details/+dept.numero+ '/'+dept.numero + '/' +dept.localidad]" class="btn btn-dark"> 
+                            details
+                        </a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>>

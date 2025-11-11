@@ -1,0 +1,94 @@
+<!-- menu-component.html -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm p-3 mb-4 rounded"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" routerLink="">
+      🏢 DepartamentosApp
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink=""
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/create"
+            routerLinkActive="active"
+          >
+            Create
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/details"
+            routerLinkActive="active"
+          >
+            Details
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<style>
+  /* Estilos del navbar y diseño general */
+  .navbar {
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .nav-link {
+    color: #ffffffcc;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+  }
+
+  .navbar .nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .navbar .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
+
+  body {
+    background-color: #f8f9fa;
+    font-family: "Segoe UI", Roboto, sans-serif;
+  }
+
+  .container {
+    padding-top: 20px;
+  }
+</style>
+
