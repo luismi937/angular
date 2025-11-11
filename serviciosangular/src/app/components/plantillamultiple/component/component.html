@@ -1,0 +1,19 @@
+<h1 style="color: blue">Api Plantilla Función múltiple</h1>
+<form #plantillaForm="ngForm">
+  <select
+    name="selectfunciones"
+    #selectfunciones
+    class="form-control"
+    multiple
+    size="5"
+  >
+    @for (funcion of funciones; track funcion) {
+      <option>{{ funcion }}</option>
+    }
+  </select>
+
+  <button class="btn btn-info" (click)="mostrarPlantilla()">
+    Mostrar plantilla
+  </button>
+</form>
+

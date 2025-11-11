@@ -19,13 +19,15 @@ import { ServicePlantilla } from './services/service.plantilla';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { PlantillaSimpleComponent } from './components/plantillafuncioncsimple.components/plantillafuncioncsimple.components';
+import { PlantillaMultipleComponent } from './components/plantillamultiple/component/component';
 
 @NgModule({
   declarations: [
     App,
     PersonasapiComponent,
     CochesComponent,
-    PlantillaSimpleComponent
+    PlantillaSimpleComponent,
+    PlantillaMultipleComponent
   ],
   imports: [
     BrowserModule,

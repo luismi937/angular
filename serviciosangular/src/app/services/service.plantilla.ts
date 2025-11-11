@@ -33,4 +33,32 @@ export class ServicePlantilla {
 
     return plantillas;
   }
+  getPlantillaFunciones(funciones: Array<string>): Observable<Array<Plantilla>> { 
+
+    //?funcion=Enfermero&funcion=Enfermera 
+
+    let datos = ""; 
+
+    for (var funcion of funciones){ 
+
+      datos += "funcion=" + funcion + "&"; 
+
+    } 
+
+    //?funcion=Enfermero&funcion=Enfermera& 
+
+    //ELIMINAMOS EL ULTIMO CARACTER & 
+
+    datos = datos.substring(0, datos.length - 1); 
+
+    let request = "api/plantilla/plantillafunciones?" + datos; 
+
+    let url = environment.apiUrl + request; 
+
+    return this._http.get<Array<Plantilla>>(url); 
+
+  } 
+
 }
+
+ 
