@@ -1,42 +1,57 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ServicePlantillas } from '../../services/service.plantilla';
-import { Plantilla } from '../../../models/plantilla';
+import { Component, OnInit } from '@angular/core'; 
 
-@Component({
-  selector: 'app-plantillafuncionsimple',
-  standalone: false,
-  templateUrl: './plantillafuncioncsimple.components.html',
-  styleUrls: ['./plantillafuncioncsimple.components.css']
-})
-export class PlantillafuncionsimpleComponent implements OnInit {
-  funciones: Array<any> = [];
-  plantillas: Plantilla[] = [];
+import { ElementRef, ViewChild } from '@angular/core'; 
 
-  @ViewChild('seleccionFuncion') seleccionFuncion!: ElementRef;
+import { Plantilla } from '../../../models/plantilla'; 
 
-  constructor(private _service: ServicePlantillas) {}
+import { ServicePlantilla } from '../../services/service.plantilla'; 
 
-  ngOnInit(): void {
-    this.cargarFunciones();
-  }
+@Component({ 
 
-  cargarFunciones(): void {
-    this._service.getFunciones().subscribe({
-      next: (res: any) => {
-        // Eliminar duplicados usando Set
-        this.funciones = Array.from(new Set(res));
-      },
-      error: (err) => console.error('Error al cargar funciones:', err)
-    });
-  }
+ selector: 'app-plantilla', 
 
-  buscarPlantillas(): void {
-    const funcion = this.seleccionFuncion.nativeElement.value;
-    if (!funcion) return;
+ standalone: false, 
 
-    this._service.getPlantillasPorFuncion(funcion).subscribe({
-      next: (response) => this.plantillas = response,
-      error: (error) => console.error('Error al cargar plantillas:', error)
-    });
-  }
-}
+ templateUrl: './plantilla-simple-component.html', 
+
+ styleUrl: './plantilla-simple-component.css', 
+
+}) 
+
+export class PlantillaSimpleComponent implements OnInit { 
+
+ public funciones!: Array<string>; 
+
+ @ViewChild("selectfuncion") selectFuncion!: ElementRef; 
+
+ public plantillas: Array<Plantilla>; 
+
+ constructor(private _service: ServicePlantilla){ 
+
+  this.plantillas = new Array<Plantilla>(); 
+
+ } 
+
+ mostrarPlantilla(): void { 
+
+  let funcion = this.selectFuncion.nativeElement.value; 
+
+  this._service.getPlantillaFuncion(funcion).then(response => { 
+
+   this.plantillas = response; 
+
+  }) 
+
+ } 
+
+ ngOnInit(): void { 
+
+   this._service.getFunciones().subscribe(response => { 
+
+    this.funciones = response; 
+
+   }) 
+
+ } 
+
+} 

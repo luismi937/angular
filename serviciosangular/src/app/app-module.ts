@@ -8,23 +8,24 @@ import { App } from './app';
 import { PersonasapiComponent } from './components/personasapi.component/personasapi.component';
 import { PersonasstandaloneComponent } from './components/personasstandalone.component/personasstandalone.component';
 import { CochesComponent } from './components/coches-component/coches-component';
-import { PlantillafuncionsimpleComponent } from './components/plantillafuncioncsimple.components/plantillafuncioncsimple.components';
+import { Plantilla } from '../models/plantilla';
 
 // Servicios
 import { ServicePersona } from './services/service.persona';
 import { ServiceCoches } from './services/service.coches';
-import { ServicePlantillas } from './services/service.plantilla';
+import { ServicePlantilla } from './services/service.plantilla';
 
 // Módulos adicionales
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { PlantillaSimpleComponent } from './components/plantillafuncioncsimple.components/plantillafuncioncsimple.components';
 
 @NgModule({
   declarations: [
     App,
     PersonasapiComponent,
     CochesComponent,
-    PlantillafuncionsimpleComponent
+    PlantillaSimpleComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   providers: [
     ServicePersona,
     ServiceCoches,
-    ServicePlantillas,
+    ServicePlantilla,
     provideBrowserGlobalErrorListeners(),
     provideHttpClient()
   ],
