@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h2>Plantillas por Función</h2>
+
+  <div class="mb-3">
+    <label for="funcionSelect">Seleccione una función:</label>
+    <select id="funcionSelect" [(ngModel)]="seleccionFuncion" class="form-select">
+      <option value="">-- Seleccione --</option>
+      <option *ngFor="let fun of funciones" [value]="fun">{{ fun }}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" (click)="buscarPlantillas()">Buscar</button>
+
+  <hr />
+
+  <table class="table table-striped mt-3" *ngIf="plantillas.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Apellido</th>
+        <th>Función</th>
+        <th>Salario</th>
+        <th>Hospital</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of plantillas">
+        <td>{{ p.idPlantilla }}</td>
+        <td>{{ p.apellido }}</td>
+        <td>{{ p.funcion }}</td>
+        <td>{{ p.salario | currency }}</td>
+        <td>{{ p.hospitalCod }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="plantillas.length === 0 && seleccionFuncion !== ''">No hay resultados.</p>
+</div>
