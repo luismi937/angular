@@ -7,19 +7,19 @@ import { Plantilla } from '../../models/plantilla';
   providedIn: 'root'
 })
 export class ServicePlantillas {
-  private apiUrl: string = 'https://apiplantillacore.azurewebsites.net/';
+  private apiUrl: string = 'https://apiplantillacore.azurewebsites.net/api/Plantilla';
 
   constructor(private _http: HttpClient) {}
 
   // Obtener las funciones disponibles
-  getFunciones(): Observable<string[]> {
-    const url = this.apiUrl + 'api/plantillas/funciones';
-    return this._http.get<string[]>(url);
+  getFunciones(): Observable<any> {
+    const url = this.apiUrl ;
+    return this._http.get(url);
   }
 
   // Obtener plantillas por función
   getPlantillasPorFuncion(funcion: string): Observable<Plantilla[]> {
-    const url = this.apiUrl + 'api/plantillas/plantillafuncion/' + funcion;
+    const url = this.apiUrl + 'api/Plantilla/PlantillaFuncion/' + funcion;
     return this._http.get<Plantilla[]>(url);
   }
 }

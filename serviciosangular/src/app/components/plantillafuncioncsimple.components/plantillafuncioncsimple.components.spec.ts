@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlantillafuncioncsimpleComponents } from './plantillafuncioncsimple.components';
+import { PlantillafuncionsimpleComponent } from './plantillafuncioncsimple.components';
 
 describe('PlantillafuncioncsimpleComponents', () => {
-  let component: PlantillafuncioncsimpleComponents;
-  let fixture: ComponentFixture<PlantillafuncioncsimpleComponents>;
+  let component: PlantillafuncionsimpleComponent;
+  let fixture: ComponentFixture<PlantillafuncionsimpleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PlantillafuncioncsimpleComponents]
+      declarations: [PlantillafuncionsimpleComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PlantillafuncioncsimpleComponents);
+    fixture = TestBed.createComponent(PlantillafuncionsimpleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

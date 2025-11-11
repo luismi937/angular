@@ -1,7 +1,9 @@
-export class Plantilla {
-  idPlantilla!: number;
-  apellido!: string;
-  funcion!: string;
-  salario!: number;
-  hospitalCod!: number;
+export interface Plantilla {
+  idEmpleado: number;
+  idHospital: number;
+  idSala: number;
+  apellido: string;
+  funcion: string;
+  turno: string;
+  salario: number;
 }
