@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.btn {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+

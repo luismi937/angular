@@ -1,0 +1,13 @@
+<h2>Login de Empleados</h2>
+
+<div *ngIf="error" style="color:red">{{ error }}</div>
+
+<form (ngSubmit)="login()">
+  <label>Usuario:</label>
+  <input type="text" [(ngModel)]="username" name="username" required>
+  <br>
+  <label>Contraseña:</label>
+  <input type="password" [(ngModel)]="password" name="password" required>
+  <br>
+  <button type="submit">Iniciar Sesión</button>
+</form>
