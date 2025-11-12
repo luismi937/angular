@@ -1,13 +1,15 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { DepartamentosComponentComponent } from "./components/departamentos-component.component/departamentos-component.component";
+import { DepartamentosComponent } from "./components/departamentos-component.component/departamentos-component.component";
 import { CreateComponent } from "./components/create-component/create-component";
 import { DetailsComponent } from "./components/details-component/details-component";
+import { EditComponent } from "./components/edit-component/edit-component";
 
 const routes: Routes = [
-    {path: "", component: DepartamentosComponentComponent},
+    {path: "", component: DepartamentosComponent},
     {path:"create", component: CreateComponent},
-    {path:"details/:id/:nombre/:localidad", component:DetailsComponent}
+    {path:"details/:id/:nombre/:localidad", component:DetailsComponent},
+    {path: "edit/:id", component:EditComponent}
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

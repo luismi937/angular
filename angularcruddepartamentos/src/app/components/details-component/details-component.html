@@ -1,1 +1,10 @@
-<p>details-component works!</p>
+<h1>detalles</h1>
+
+<a [routerLink]="['/']">Back to index</a>
+@if (departamento){
+    <ul class="list-group">
+        <li class="list-group-item">id{{departamento.numero}}</li>
+        <li class="list-group-item">nombre{{departamento.nombre}}</li>
+        <li class="list-group-item">localidad{{departamento.localidad}}</li>
+    </ul>
+}
