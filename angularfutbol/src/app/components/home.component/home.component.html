@@ -1,0 +1,13 @@
+<div *ngIf="loading">Cargando...</div>
+
+<div *ngIf="!loading">
+  <h2>Jugadores</h2>
+  <ul>
+    <li *ngFor="let j of jugadores">{{ j.name }}</li>
+  </ul>
+
+  <h2>Postfiles</h2>
+  <ul>
+    <li *ngFor="let p of postfiles">{{ p.title }}</li>
+  </ul>
+</div>

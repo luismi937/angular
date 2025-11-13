@@ -1,0 +1,9 @@
+<h2>Lista de Jugadores</h2>
+
+<ul>
+  <li *ngFor="let jugador of jugadores">
+    {{ jugador.nombre }} - {{ jugador.posicion }}
+  </li>
+</ul>
+
+<p *ngIf="jugadores.length === 0">No hay jugadores disponibles.</p>
