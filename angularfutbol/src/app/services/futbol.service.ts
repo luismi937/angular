@@ -39,10 +39,10 @@ export class FutbolService {
   }
 
   buscarJugadoresPorLetra(letra: string): Observable<Jugador[]> {
-    return this._http.get<Jugador[]>(`${environment.urlApiFutbol}api/jugadores/buscar/letra/${letra}`);
+    return this._http.get<Jugador[]>(`${environment.urlApiFutbol}api/jugadores/JugadoresEquipo${letra}`);
   }
 
   buscarJugadorPorNombre(nombre: string): Observable<Jugador[]> {
-    return this._http.get<Jugador[]>(`${environment.urlApiFutbol}api/jugadores/buscar/nombre/${nombre}`);
+    return this._http.get<Jugador[]>(`${environment.urlApiFutbol}api/jugadores/BuscarJugadores${nombre}`);
   }
 }
