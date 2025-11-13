@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home.component',
-  standalone: false,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  selector: 'app-home',
+  template: `
+    <h1>Bienvenido a Angular Juegos 🎮</h1>
+    <p>Usa el menú para subir archivos o navegar por la aplicación.</p>
+  `
 })
-export class HomeComponent {
-
-}
+export class HomeComponent { }

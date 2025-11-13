@@ -1,6 +1,5 @@
-<h2>Subir Archivos</h2>
-
-<input type="file" (change)="onFileSelected($event)" />
-<button (click)="uploadFile()">Subir</button>
-
-<p>{{ message }}</p>
+<div>
+  <h2>Subir archivo en Base64</h2>
+  <input type="file" (change)="onFileSelected($event)" />
+  <p>{{ message }}</p>
+</div>

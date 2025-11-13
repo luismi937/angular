@@ -10,31 +10,37 @@ import { environment } from '../../../environments/environment';
 export class PostfilesComponent implements OnInit {
 
   apiUrl = environment.apiUrl;
-  selectedFile: File | null = null;
+  selectedFileName = '';
   message = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     console.log('API base:', this.apiUrl);
   }
 
   onFileSelected(event: any): void {
-    this.selectedFile = event.target.files[0];
-  }
-
-  uploadFile(): void {
-    if (!this.selectedFile) {
+    const file: File = event.target.files[0];
+    if (!file) {
       this.message = 'Selecciona un archivo primero.';
       return;
     }
+    this.selectedFileName = file.name;
 
-    const formData = new FormData();
-    formData.append('file', this.selectedFile);
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64String = (reader.result as string).split(',')[1];
+      this.uploadBase64File(base64String, file.name);
+    };
+    reader.onerror = () => { this.message = 'Error leyendo el archivo.'; };
+    reader.readAsDataURL(file);
+  }
 
-    this.http.post(`${this.apiUrl}upload`, formData).subscribe({
-      next: () => this.message = 'Archivo subido correctamente ✅',
-      error: () => this.message = '❌ Error al subir archivo.'
+  uploadBase64File(base64String: string, filename: string): void {
+    const payload = { filename, filedata: base64String };
+    this.http.post(`${this.apiUrl}uploadBase64`, payload).subscribe({
+      next: () => this.message = `Archivo '${filename}' subido correctamente ✅`,
+      error: () => this.message = `❌ Error al subir archivo '${filename}'.`
     });
   }
 }
