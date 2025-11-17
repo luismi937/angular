@@ -20,6 +20,10 @@ export class JugadoresComponent implements OnInit {
   constructor(private jugadoresService: JugadoresService) { }
 
   ngOnInit(): void {
+    // ngOnInit: se ejecuta al crear el componente.
+    // Aquí inicializamos la carga de datos del componente llamando
+    // a `cargarJugadores()` para rellenar la lista desde el servicio.
+    // Es el lugar apropiado para peticiones que llenan la vista.
     this.cargarJugadores();
   }
 

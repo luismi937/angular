@@ -39,6 +39,10 @@ export class EditComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // ngOnInit: obtener el id desde la ruta y cargar el departamento
+    // correspondiente antes de mostrar el formulario de edición.
+    // Usamos ActivatedRoute.params para leer el parámetro 'id' y
+    // luego llamamos al servicio para recuperar los datos iniciales.
     this._activeRoute.params.subscribe((params: Params) => {
       let id = parseInt(params['id']);
 

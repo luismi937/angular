@@ -21,6 +21,10 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
+    // ngOnInit: inicializa la vista cuando el componente se crea.
+    // Aquí se lanzan las peticiones concurrentes necesarias para
+    // obtener datos iniciales (jugadores y equipos) mediante forkJoin.
+    // Usamos forkJoin para esperar ambas respuestas y poblar la UI.
     const jugadoresRequest = this.http.get<any[]>('https://apiapuestas.azurewebsites.net/jugadores');
     const postfilesRequest = this.http.get<any[]>('https://apiapuestas.azurewebsites.net/equipos');
 

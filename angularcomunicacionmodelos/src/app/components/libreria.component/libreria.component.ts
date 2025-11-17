@@ -38,6 +38,8 @@ export class LibreriaComponent implements OnInit{
   constructor(private _service: ServiceComics){}
 
     ngOnInit(): void{
+      // ngOnInit: recuperar lista inicial de cómics usando el servicio.
+      // Es la inicialización habitual de datos para poblar la UI.
       this.comics = this._service.getComics();
     }
    

@@ -30,6 +30,9 @@ export class DepartamentosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // ngOnInit: carga inicial de la lista de departamentos.
+    // Llamamos a loadDepartamentos() para obtener los datos desde
+    // el servicio y poblar la vista al crear el componente.
     this.loadDepartamentos();
   }
 

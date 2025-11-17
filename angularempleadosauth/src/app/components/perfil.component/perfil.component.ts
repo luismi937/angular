@@ -18,6 +18,9 @@ export class PerfilComponent implements OnInit {
   constructor(private empleadosService: EmpleadosService) {}
 
   ngOnInit(): void {
+    // ngOnInit: carga el perfil autenticado al inicializar el componente.
+    // Hacemos una petición al servicio para obtener los datos del empleado
+    // y almacenarlos en `this.empleado` para mostrarlos en la vista.
     this.empleadosService.getPerfil().subscribe({
       next: (data) => this.empleado = data,
       error: (err) => console.error('Error al obtener perfil', err)
