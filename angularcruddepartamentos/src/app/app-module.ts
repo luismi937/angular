@@ -1,3 +1,9 @@
+/*
+  Módulo principal de la aplicación: angularcruddepartamentos
+  - Declara componentes para CRUD de departamentos y menú.
+  - Importa BrowserModule, AppRoutingModule y FormsModule.
+  - Registra providers como ServiceDepartamentos y cliente HTTP.
+*/
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

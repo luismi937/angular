@@ -1,3 +1,13 @@
+/*
+  Servicio: FutbolService
+  Descripción: Provee métodos para obtener datos relacionados con fútbol desde la API.
+  Funcionalidad principal:
+    - obtener jugadores de un equipo
+    - obtener información de un equipo
+    - combinar llamadas para obtener datos compuestos (DatosEquipo)
+
+  Nota: usa el objeto `environment` para la URL base de la API.
+*/
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin, map } from 'rxjs';

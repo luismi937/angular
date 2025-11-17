@@ -1,3 +1,8 @@
+/*
+  Módulo de enrutamiento: angularjuegos
+  - Define las rutas principales: 'home' y 'postfiles'.
+  - Redirige rutas no reconocidas a 'home'.
+*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home.component/home.component';

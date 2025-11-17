@@ -1,3 +1,9 @@
+/*
+  Módulo de enrutamiento: angularempleadosauth
+  - Rutas para autenticación y gestión de perfil: login, perfil y subordinados.
+  - Home como ruta raíz.
+  - AuthService proporciona lógica de autenticación usada por componentes.
+*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home.component/home.component';

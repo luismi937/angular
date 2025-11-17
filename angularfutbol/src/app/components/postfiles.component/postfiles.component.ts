@@ -1,3 +1,11 @@
+/*
+  Componente: PostfilesComponent
+  Descripción: Permite seleccionar y subir un archivo al endpoint de la API.
+  Campos:
+    - apiUrl: URL base de la API tomada de environment
+    - selectedFile: archivo seleccionado por el usuario
+    - message: mensaje informativo para el usuario
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environments';

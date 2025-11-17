@@ -1,3 +1,10 @@
+/*
+  Componente: JugadoresComponent
+  Descripción: Muestra una lista de jugadores solicitada desde el servicio `JugadoresService`.
+  Comportamiento:
+    - carga jugadores al inicializarse (ngOnInit)
+    - maneja errores e informa en consola
+*/
 import { Component, OnInit } from '@angular/core';
 import { JugadoresService } from '../../services/jugadores.service'; // importamos el servicio
 

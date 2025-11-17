@@ -1,3 +1,10 @@
+/*
+  Componente: HomeComponent
+  Descripción: Componente de inicio que carga datos combinados (jugadores y equipos) usando forkJoin.
+  Notas:
+    - usa HttpClient para hacer peticiones a endpoints de ejemplo
+    - establece `loading` mientras espera las respuestas
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin } from 'rxjs';
