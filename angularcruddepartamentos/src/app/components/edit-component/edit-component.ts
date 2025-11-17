@@ -1,3 +1,9 @@
+/*
+  Componente: EditComponent (angularcruddepartamentos)
+  - Permite editar un departamento existente.
+  - Usa ServiceDepartamentos para obtener y actualizar datos.
+  - Recupera el id desde la ruta (ActivatedRoute) y navega tras la edición.
+*/
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 import { Departamento } from '../../models/departamento';

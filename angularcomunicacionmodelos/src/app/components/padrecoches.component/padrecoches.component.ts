@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { Coche } from '../../models/producto/coches';
 
+/*
+  Componente: PadrecochesComponent (angularcomunicacionmodelos)
+  - Componente padre que gestiona la lista de coches y pasa datos a HijococheComponent.
+*/
 @Component({
   selector: 'app-padrecoches',
   standalone: false,

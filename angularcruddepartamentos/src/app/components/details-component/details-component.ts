@@ -1,3 +1,8 @@
+/*
+  Componente: DetailsComponent (angularcruddepartamentos)
+  - Muestra los detalles de un departamento recibido por parámetros de ruta.
+  - Construye un objeto Departamento para la vista a partir de los params.
+*/
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Departamento } from '../../models/departamento';

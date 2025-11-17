@@ -1,3 +1,8 @@
+/*
+  Componente: HomeComponent (angularempleadosauth)
+  - Componente raíz que comprueba autenticación y redirige a login si es necesario.
+  - Proporciona la acción de logout que limpia la sesión.
+*/
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';

@@ -1,3 +1,7 @@
+/*
+  Componente: MenuproductosComponent (angularcomunicacionmodelos)
+  - Muestra el menú de navegación para el catálogo de productos.
+*/
 import { Component } from '@angular/core';
 
 @Component({

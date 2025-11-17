@@ -1,3 +1,8 @@
+/*
+  Componente: DepartamentosComponent (angularcruddepartamentos)
+  - Lista los departamentos y permite eliminarlos.
+  - Utiliza ServiceDepartamentos para las operaciones CRUD.
+*/
 import { Component, OnInit } from '@angular/core';
 
 import ServiceDepartamentos from '../../../services/service.departamentos';

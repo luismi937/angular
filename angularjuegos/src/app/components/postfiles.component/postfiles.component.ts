@@ -1,3 +1,8 @@
+/*
+  Componente: PostfilesComponent (angularjuegos)
+  - Permite seleccionar y subir archivos al backend como Base64.
+  - Usa HttpClient para enviar datos y `environment` para la URL base.
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';

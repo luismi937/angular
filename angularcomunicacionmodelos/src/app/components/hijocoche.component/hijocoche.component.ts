@@ -1,3 +1,8 @@
+/*
+  Componente: HijococheComponent (angularcomunicacionmodelos)
+  - Componente hijo que representa un coche.
+  - Recibe un `Coche` como Input y controla su estado y velocidad.
+*/
 import { Component, Input } from '@angular/core';
 import { Coche } from '../../models/producto/coches';
 @Component({

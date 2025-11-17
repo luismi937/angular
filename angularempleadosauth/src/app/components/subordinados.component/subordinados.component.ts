@@ -1,3 +1,8 @@
+/*
+  Componente: SubordinadosComponent (angularempleadosauth)
+  - Lista los empleados subordinados obtenidos mediante EmpleadosService.
+  - Realiza la petición en ngOnInit y muestra resultado en la vista.
+*/
 import { Component, OnInit } from '@angular/core';
 import { EmpleadosService } from '../../services/empleados.service';
 
