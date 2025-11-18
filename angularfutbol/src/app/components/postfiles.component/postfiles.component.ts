@@ -1,3 +1,11 @@
+/*
+  Componente: PostfilesComponent
+  Descripción: Permite seleccionar y subir un archivo al endpoint de la API.
+  Campos:
+    - apiUrl: URL base de la API tomada de environment
+    - selectedFile: archivo seleccionado por el usuario
+    - message: mensaje informativo para el usuario
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environments';
@@ -10,12 +18,23 @@ import { environment } from '../../../environments/environments';
 })
 export class PostfilesComponent implements OnInit {
   apiUrl = environment.urlApiFutbol;
+  // `selectedFile` almacena el archivo seleccionado por el usuario.
+  // Tipo: `File | null` significa que puede contener un objeto File
+  // (cuando el usuario selecciona un archivo) o `null` cuando no
+  // hay ningún archivo seleccionado. Inicializamos a `null` para
+  // indicar estado vacío.
+  // Uso típico: al cambiar el input file se asigna el File a esta
+  // variable y luego se usa para enviarlo al servidor (o crear FormData).
   selectedFile: File | null = null;
   message = '';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+    // ngOnInit: se ejecuta al crear el componente.
+    // Aquí solo registramos la URL base de la API en consola como
+    // acción de inicialización ligera. En componentes más complejos
+    // aquí se lanzarían llamadas para traer datos iniciales.
     console.log('API base:', this.apiUrl);
   }
 

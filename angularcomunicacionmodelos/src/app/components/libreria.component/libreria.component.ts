@@ -1,3 +1,8 @@
+/*
+  Componente: LibreriaComponent (angularcomunicacionmodelos)
+  - Gestiona la lista de cómics y permite crear, seleccionar favorito y eliminar.
+  - Usa ServiceComics para obtener la lista inicial de cómics.
+*/
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Comic } from '../../models/producto/comics';
 import { ServiceComics } from '../../services/service.comics';
@@ -33,6 +38,8 @@ export class LibreriaComponent implements OnInit{
   constructor(private _service: ServiceComics){}
 
     ngOnInit(): void{
+      // ngOnInit: recuperar lista inicial de cómics usando el servicio.
+      // Es la inicialización habitual de datos para poblar la UI.
       this.comics = this._service.getComics();
     }
    

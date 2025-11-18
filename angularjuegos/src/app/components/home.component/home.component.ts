@@ -1,3 +1,8 @@
+/*
+  Componente: HomeComponent (angularjuegos)
+  - Página de bienvenida de la app.
+  - Componente estático usado como ruta principal ('home').
+*/
 import { Component } from '@angular/core';
 
 @Component({

@@ -1,6 +1,10 @@
 import { Component, Input, Output, EventEmitter, input } from '@angular/core';
 import { Comic } from '../../models/producto/comics';
 
+/*
+  Componente: ComicComponent (angularcomunicacionmodelos)
+  - Presenta información de un cómic en la lista de productos.
+*/
 @Component({
   selector: 'app-comic.component',
   standalone: false,

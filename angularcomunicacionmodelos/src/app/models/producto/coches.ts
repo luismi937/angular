@@ -1,3 +1,7 @@
+/*
+  Modelo: Coche (angularcomunicacionmodelos)
+  - Representa un coche con marca, modelo, velocidad, aceleración y estado.
+*/
 export class Coche{
     constructor(
         public marca: string,

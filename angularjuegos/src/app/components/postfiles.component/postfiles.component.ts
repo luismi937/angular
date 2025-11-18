@@ -1,3 +1,8 @@
+/*
+  Componente: PostfilesComponent (angularjuegos)
+  - Permite seleccionar y subir archivos al backend como Base64.
+  - Usa HttpClient para enviar datos y `environment` para la URL base.
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
@@ -16,6 +21,14 @@ export class PostfilesComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    // ngOnInit se ejecuta una vez después de que Angular inicializa
+    // las propiedades enlazadas del componente (por ejemplo, @Input()).
+    // Aquí se utiliza para realizar una acción de inicialización simple:
+    // imprimimos en consola la URL base de la API usada por este componente.
+    // Usos típicos de ngOnInit en componentes reales:
+    // - lanzar peticiones para cargar datos iniciales
+    // - inicializar observables o suscripciones
+    // - ejecutar lógica que requiere que los bindings estén resueltos
     console.log('API base:', this.apiUrl);
   }
 

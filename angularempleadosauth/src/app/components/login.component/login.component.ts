@@ -1,3 +1,10 @@
+/*
+  Componente: LoginComponent
+  Descripción: Formulario de inicio de sesión que usa AuthService para autenticar.
+  Comportamiento:
+    - al hacer login, redirige a /perfil en caso de éxito
+    - muestra un mensaje de error en caso de fallo
+*/
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';

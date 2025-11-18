@@ -1,3 +1,8 @@
+/*
+  Módulo de enrutamiento: angularfutbol
+  - Define rutas para Home, Jugadores y Postfiles.
+  - Redirige rutas desconocidas al Home.
+*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home.component/home.component';

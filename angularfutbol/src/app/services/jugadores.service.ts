@@ -1,3 +1,8 @@
+/*
+  Servicio: JugadoresService
+  Descripción: Servicio simple para obtener la lista de jugadores desde una API externa.
+  Nota: actualizar `apiUrl` con la URL correcta de la API si es necesario.
+*/
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';

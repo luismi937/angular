@@ -1,3 +1,7 @@
+/*
+  Modelo: Comic (angularcomunicacionmodelos)
+  - Representa un cómic con título, imagen y descripción.
+*/
 export class Comic{
     constructor(
         public titulo: string,

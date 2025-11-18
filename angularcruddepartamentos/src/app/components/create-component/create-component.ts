@@ -1,3 +1,8 @@
+/*
+  Componente: CreateComponent (angularcruddepartamentos)
+  - Formulario para crear un nuevo Departamento.
+  - Recoge valores mediante ViewChild y llama a ServiceDepartamentos.createDepartamento.
+*/
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { Router } from '@angular/router';

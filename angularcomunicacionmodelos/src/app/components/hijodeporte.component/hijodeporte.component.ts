@@ -1,3 +1,8 @@
+/*
+  Componente: HijodeporteComponent (angularcomunicacionmodelos)
+  - Componente hijo que emite eventos hacia el componente padre para seleccionar favorito.
+  - Usa Input para recibir datos y Output para emitir acciones.
+*/
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({

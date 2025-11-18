@@ -1,3 +1,8 @@
+/*
+  Componente: ListaproductosComponent (angularcomunicacionmodelos)
+  - Lista de productos disponible en la aplicación.
+  - Define datos de ejemplo para demostración (Producto model).
+*/
 import { Component } from '@angular/core';
 import { Producto } from '../../models/producto/producto';
 

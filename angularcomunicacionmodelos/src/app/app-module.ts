@@ -1,3 +1,9 @@
+/*
+  Módulo principal de la aplicación: angularcomunicacionmodelos
+  - Declara componentes del catálogo (productos, menú, componentes hijos, comic, librería).
+  - Importa BrowserModule, FormsModule y el enrutamiento (routing).
+  - Registra providers: cliente HTTP y servicios específicos de la app.
+*/
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +20,6 @@ import { LibreriaComponent } from './components/libreria.component/libreria.comp
 import { FormsModule } from '@angular/forms';
 import { ServiceComics } from './services/service.comics';
 import { provideHttpClient } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     App,

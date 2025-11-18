@@ -1,3 +1,11 @@
+/*
+  Servicio: AuthService
+  Descripción: Gestiona la autenticación contra el backend y el almacenamiento del token.
+  Funciones principales:
+    - login: obtiene token mediante OAuth y lo guarda en localStorage
+    - getToken / logout: gestión simple del token
+    - isAuthenticated / isLoggedIn: comprobación de estado de sesión
+*/
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';

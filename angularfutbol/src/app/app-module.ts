@@ -1,3 +1,9 @@
+/*
+  Módulo principal de la aplicación: angularfutbol
+  - Declara componentes: App, HomeComponent, PostfilesComponent, JugadoresComponent.
+  - Importa módulos necesarios: BrowserModule, FormsModule, HttpClientModule y AppRoutingModule.
+  - Bootstrap de la aplicación.
+*/
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';

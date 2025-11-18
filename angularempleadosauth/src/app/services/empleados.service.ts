@@ -1,3 +1,9 @@
+/*
+  Servicio: EmpleadosService
+  Descripción: Provee métodos autenticados para obtener datos del empleado (perfil, subordinados).
+  Implementación:
+    - añade encabezado Authorization con Bearer token obtenido desde AuthService
+*/
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';

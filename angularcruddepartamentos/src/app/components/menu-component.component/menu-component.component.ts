@@ -1,3 +1,8 @@
+/*
+  Componente: MenuComponentComponent (angularcruddepartamentos)
+  - Barra de navegación/menu de la aplicación CRUD de departamentos.
+  - Contiene enlaces a las vistas de listado, creación y edición.
+*/
 import { Component } from '@angular/core';
 
 @Component({

@@ -1,3 +1,7 @@
+/*
+  Componente: PadredeportesComponent (angularcomunicacionmodelos)
+  - Componente padre que gestiona la lista de deportes y comunica eventos a hijos.
+*/
 import { Component } from '@angular/core';
 
 @Component({
