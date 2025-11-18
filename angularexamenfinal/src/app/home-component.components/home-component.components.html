@@ -1,0 +1,25 @@
+<h1>Todos los cubos</h1>
+
+<div class="mb-3">
+    <label>Filtrar por la marca</label>
+    <select class="form-select" (change)="onBrand($event.target.value)">
+        <option value=""> Todas</option>
+        <option *ngFor="let m of marcas"[value]='m'>{{m}}</option>
+    </select>
+</div>
+<div class="row">
+    <div class="col-md-4 md-3" *ngFor="let c of filtered">
+        <div class="card h-100">
+            <img
+            [src]="c.imagen || 'https://via.placeholder.com/300"
+            class="card-img-top"
+            alt="imagen de cubo"/>
+            <div class="card-body">
+                <h5>{{c.nombre}}</h5>
+                <p>{{c.marca}}</p>
+                <a [routerLink]="['/cube', c.id]" class="btn btn-primary">Ver</a>
+
+            </div>
+        </div>
+    </div>
+</div>
